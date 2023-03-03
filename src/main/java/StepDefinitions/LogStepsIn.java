@@ -34,13 +34,6 @@ public class LogStepsIn {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.get("http://adactinhotelapp.com/");
-        ExtentSparkReporter spark = new ExtentSparkReporter("C:\\Users\\Khwezilenkosi.Myeni\\IdeaProjects\\BDD_Exercise1\\src\\main\\java\\Reports\\report.html");
-        extent = new ExtentReports();
-        extent.attachReporter(spark);
-
-        test1 = extent.createTest("BookHotel").assignAuthor("Khwezi").assignCategory("Smoke test").assignDevice("Chrome");
-        test1.log(Status.PASS, "User Fills in Login credentials");
-        test1.pass("User successfully logged in");
     }
 
     @When("a user navigates to the Login page")
